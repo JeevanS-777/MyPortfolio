@@ -31,7 +31,8 @@
     <!-- NAVIGATION BAR -->
     <header class="nav">
         <div class="logo">Portfolio</div>
-
+    
+        <!-- Desktop Nav -->
         <nav class="nav-links">
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -39,16 +40,36 @@
             <a href="#experience">Experience</a>
             <a href="#achievements">Achievements</a>
             <a href="#contact">Contact</a>
-
-            <!-- Theme Toggle Switch -->
+        </nav>
+    
+        <!-- MOBILE CONTROLS (Hamburger + Toggle Together) -->
+        <div class="mobile-controls">
+            <div id="hamburger" class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+    
             <div class="toggle-wrapper">
                 <input type="checkbox" id="theme-toggle" class="toggle-input"/>
                 <label for="theme-toggle" class="toggle-switch">
                     <span class="toggle-circle"></span>
                 </label>
             </div>
+        </div>
+    
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="mobile-menu">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
         </nav>
     </header>
+    
+    
 
     <div class="page">
 
