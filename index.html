@@ -1,0 +1,344 @@
+<!-- FILE: index.html -->
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>My Portfolio</title>
+
+    <!-- Page Meta -->
+    <meta name="description"
+          content="Jeevan S — Full-Stack Developer | AI & ML Enthusiast | Open Source Contributor" />
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Space+Grotesk:wght@400;600&display=swap"
+          rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+          crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+    <!-- Main Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Background Canvas (Three.js / Particles) -->
+    <canvas id="bg-canvas" class="bg-canvas"></canvas>
+
+    <!-- NAVIGATION BAR -->
+    <header class="nav">
+        <div class="logo">Portfolio</div>
+
+        <nav class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#achievements">Achievements</a>
+            <a href="#contact">Contact</a>
+
+            <!-- Theme Toggle Switch -->
+            <div class="toggle-wrapper">
+                <input type="checkbox" id="theme-toggle" class="toggle-input"/>
+                <label for="theme-toggle" class="toggle-switch">
+                    <span class="toggle-circle"></span>
+                </label>
+            </div>
+        </nav>
+    </header>
+
+    <div class="page">
+
+        <!-- HERO SECTION -->
+        <section class="hero" id="home">
+            <div class="hero-inner container fade-in">
+
+                <!-- User Photo -->
+                <div class="hero-left">
+                    <div class="photo-frame">
+                        <input id="photo-input" type="file" accept="image/*" hidden/>
+                        <div id="photo-placeholder" class="photo-placeholder" title="Click to add photo">
+                            <span class="upload-hint">Add Photo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Text Content -->
+                <div class="hero-right">
+                    <h1 class="hero-title">I’m <span class="name">Jeevan S</span></h1>
+                    <p class="hero-sub">Full-Stack Developer | Open Source Contributor | AI & ML </p>
+
+                    <div class="hero-cta">
+                        <a class="btn primary" href="#contact">Connect</a>
+                        <a class="btn ghost" href="#" id="download-resume">Download Resume</a>
+                    </div>
+
+                    <div class="hero-stats">
+                        <div class="stat">
+                            <div class="num">-</div>
+                            <div class="label">Full Stack Projects</div>
+                        </div>
+                        <div class="stat">
+                            <div class="num">-</div>
+                            <div class="label">Years Experience</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ABOUT SECTION -->
+        <section class="about container fade-in" id="about">
+            <h2>About Me</h2>
+
+            <div class="about-inner">
+                <div class="about-photo glass">
+                    <div class="photo-placeholder small" id="about-photo">Add Photo</div>
+                </div>
+
+                <div class="about-text glass">
+                    <p>Hello! I'm Jeevan — a full-stack developer passionate about building elegant web apps and exploring Machine Learning. I enjoy contributing to open-source and learning new tech every day.</p>
+
+                    <ul class="about-list">
+                        <li><strong>Location:</strong> Mysuru, India</li>
+                        <li><strong>Focus:</strong> Web, AI/ML, Open Source</li>
+                        <li><strong>Tools:</strong> HTML, CSS, JS, Node.js, Express.js, PostgreSQL, React.js</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- SKILLS SECTION -->
+        <section class="skills container fade-in" id="skills">
+            <h2>Skills</h2>
+
+            <div class="skills-grid">
+                <div class="skill-card glass"><div class="skill-icon">HTML</div><div class="skill-name">HTML</div></div>
+                <div class="skill-card glass"><div class="skill-icon">CSS</div><div class="skill-name">CSS</div></div>
+                <div class="skill-card glass"><div class="skill-icon">JS</div><div class="skill-name">JavaScript</div></div>
+                <div class="skill-card glass"><div class="skill-icon">Node</div><div class="skill-name">Node.js</div></div>
+                <div class="skill-card glass"><div class="skill-icon">Express</div><div class="skill-name">Express.js</div></div>
+                <div class="skill-card glass"><div class="skill-icon">React</div><div class="skill-name">React.js</div></div>
+                <div class="skill-card glass"><div class="skill-icon">ML</div><div class="skill-name">Machine Learning</div></div>
+            </div>
+        </section>
+
+        <!-- PROJECTS SECTION -->
+        <section class="projects container fade-in" id="projects">
+            <h2>Projects</h2>
+
+            <div class="projects-grid">
+
+                <!-- Project Card Template -->
+                <article class="project-card glass project-blank">
+                    <div class="project-thumb project-thumb-placeholder"></div>
+                    <h3 class="project-title">Project Title</h3>
+                    <p class="project-desc">Short description placeholder.</p>
+
+                    <div class="project-tags">
+                        <span class="tag">HTML</span>
+                        <span class="tag">CSS</span>
+                    </div>
+
+                    <div class="project-actions">
+                        <button class="btn small">View Project</button>
+                        <button class="btn small ghost">GitHub</button>
+                    </div>
+                </article>
+
+                <!-- Five More Duplicate Cards -->
+                <article class="project-card glass project-blank">
+                    <div class="project-thumb project-thumb-placeholder"></div>
+                    <h3 class="project-title">Project Title</h3>
+                    <p class="project-desc">Short description placeholder.</p>
+                    <div class="project-tags"><span class="tag">JS</span></div>
+                    <div class="project-actions">
+                        <button class="btn small">View Project</button>
+                        <button class="btn small ghost">GitHub</button>
+                    </div>
+                </article>
+
+                <article class="project-card glass project-blank">
+                    <div class="project-thumb project-thumb-placeholder"></div>
+                    <h3 class="project-title">Project Title</h3>
+                    <p class="project-desc">Short description placeholder.</p>
+                    <div class="project-tags"><span class="tag">Node</span></div>
+                    <div class="project-actions">
+                        <button class="btn small">View Project</button>
+                        <button class="btn small ghost">GitHub</button>
+                    </div>
+                </article>
+
+                <article class="project-card glass project-blank">
+                    <div class="project-thumb project-thumb-placeholder"></div>
+                    <h3 class="project-title">Project Title</h3>
+                    <p class="project-desc">Short description placeholder.</p>
+                    <div class="project-tags"><span class="tag">AI</span></div>
+                    <div class="project-actions">
+                        <button class="btn small">View Project</button>
+                        <button class="btn small ghost">GitHub</button>
+                    </div>
+                </article>
+
+                <article class="project-card glass project-blank">
+                    <div class="project-thumb project-thumb-placeholder"></div>
+                    <h3 class="project-title">Project Title</h3>
+                    <p class="project-desc">Short description placeholder.</p>
+                    <div class="project-tags"><span class="tag">React</span></div>
+                    <div class="project-actions">
+                        <button class="btn small">View Project</button>
+                        <button class="btn small ghost">GitHub</button>
+                    </div>
+                </article>
+
+                <article class="project-card glass project-blank">
+                    <div class="project-thumb project-thumb-placeholder"></div>
+                    <h3 class="project-title">Project Title</h3>
+                    <p class="project-desc">Short description placeholder.</p>
+                    <div class="project-tags"><span class="tag">Design</span></div>
+                    <div class="project-actions">
+                        <button class="btn small">View Project</button>
+                        <button class="btn small ghost">GitHub</button>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- EXPERIENCE SECTION -->
+        <section class="experience container fade-in" id="experience">
+            <h2>Experience</h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item glass">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Role - Company</h3>
+                        <span class="timeline-duration">Month (year) - Present</span>
+                        <p>Short description about responsibilities and achievements.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item glass">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Role - Company</h3>
+                        <span class="timeline-duration">Month (year) - Month (year)</span>
+                        <p>Short description about responsibilities and achievements.</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ACHIEVEMENTS SECTION -->
+        <section class="achievements container fade-in" id="achievements">
+            <h2>Achievements</h2>
+
+            <div class="achievements-grid fade-in">
+
+                <div class="achievement-card glass">
+                    <div class="achievement-image">
+                        <img src="your-image1.jpg" alt="Certificate 1"/>
+                    </div>
+                    <h3>Top 50 — CodeRed Hackathon</h3>
+                    <p>Selected among 525+ teams for creating EcoSort — a smart waste management system.</p>
+                    <a href="your-image1.jpg" target="_blank" class="btn small ghost">View Certificate</a>
+                </div>
+
+                <div class="achievement-card glass">
+                    <div class="achievement-image">
+                        <img src="your-image2.jpg" alt="Certificate 2"/>
+                    </div>
+                    <h3>Udemy Web Dev Certificate</h3>
+                    <p>Completed a full-stack bootcamp covering HTML, CSS, JavaScript, React, Node.js & more.</p>
+                    <a href="your-image2.jpg" target="_blank" class="btn small ghost">View Certificate</a>
+                </div>
+
+                <div class="achievement-card glass">
+                    <div class="achievement-image">
+                        <img src="your-image3.jpg" alt="Certificate 3"/>
+                    </div>
+                    <h3>AI & ML Course Completion</h3>
+                    <p>Learned ML algorithms, NLP, model training & deployment fundamentals.</p>
+                    <a href="your-image3.jpg" target="_blank" class="btn small ghost">View Certificate</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- CONTACT SECTION -->
+        <section class="contact container fade-in" id="contact">
+            <h2>Contact Me</h2>
+
+            <div class="contact-inner">
+                <form id="contact-form" class="glass contact-form">
+
+                    <div class="field">
+                        <label for="name">Name</label>
+                        <input id="name" name="name" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="email">Email</label>
+                        <input id="email" name="email" type="email" required>
+                    </div>
+
+                    <div class="field">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+
+                    <div class="form-actions">
+                        <button type="submit" class="btn primary">Send Message</button>
+                    </div>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- SOCIAL BAR -->
+        <div class="social-bar container">
+            <a href="https://github.com/JeevanS-777" target="_blank" aria-label="Github">
+                <i class="fab fa-github"></i>
+            </a>
+            <a href="https://www.linkedin.com/in/jeevans23062005/" target="_blank" aria-label="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://www.instagram.com/jeevan_s_777/" target="_blank" aria-label="Instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+        </div>
+
+        <!-- FOOTER -->
+        <footer class="footer container">
+            <div>© 2025 Jeevan S</div>
+        </footer>
+
+    </div>
+
+    <!-- External Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r152/three.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+    <!-- Background Animation -->
+    <script type="module" src="animation-background.js"></script>
+
+    <!-- EmailJS Integration -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        (function () {
+            emailjs.init("c6GfvVHmaIdDIC_VH");
+        })();
+    </script>
+
+    <!-- Main Script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
