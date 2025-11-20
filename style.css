@@ -1,6 +1,7 @@
 html {
   scroll-behavior: smooth;
 }
+
 :root{
   --bg-1: linear-gradient(135deg,#081029 0%, #0b1b2b 100%);
   --glass: rgba(255,255,255,0.06);
@@ -465,10 +466,24 @@ border-top: 2px solid rgba(255,255,255,0.03);
 
 /* RESPONSIVE */
 @media (max-width:900px){
-.hero-inner{flex-direction:column}
-.about-inner{flex-direction:column}
-.contact-inner{flex-direction:column}
-.nav-links{display:none}
+  .hero-inner{flex-direction:column}
+  .about-inner{flex-direction:column}
+
+  /* Make contact form FULL width on mobile */
+  .contact-inner{
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .contact-form{
+    width: 100%;
+  }
+  
+  .nav-links{display:none}
+}
+
+.contact-form {
+  margin: 0 auto;
 }
 
 /* small helpers for animation */
@@ -679,4 +694,17 @@ pointer-events: none;
     color: var(--text);
     font-size: 1.1rem;
   }
+}
+
+/* Fix mobile menu text color in light theme */
+:root:not(.dark) .mobile-menu a {
+  color: #ffffff !important;
+}
+
+.skill-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }

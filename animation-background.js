@@ -1,7 +1,6 @@
 import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
 
 (function () {
-    console.log("Soft rounded particle background running…");
 
     const canvas = document.getElementById("bg-canvas");
     if (!canvas) return;
@@ -11,7 +10,7 @@ import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
         antialias: true,
         alpha: true,
     });
-    renderer.setPixelRatio(window.devicePixelRatio);
+    renderer.setPixelRatio(1);
     renderer.setSize(window.innerWidth, window.innerHeight);
 
     const scene = new THREE.Scene();
